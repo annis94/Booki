@@ -2,11 +2,13 @@
 
 /* Réinitialisation et polices par défaut */
 * {
+    box-sizing: border-box;
     font-family: "Raleway", sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
+}
+
+
   
   /* Variables globales */
   :root {
@@ -70,24 +72,15 @@
   }
   
   /****** Main Container ***********/
-  
-  /* Styles généraux du corps */
   body {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Conteneur principal */
-  .main-container {
-    width: 100%;
-    max-width: 1440px;
+    min-width: 320px;
+}
+
+.main-container {
     padding: 0 50px;
-    box-sizing: border-box;
     margin: 0;
-  }
-  
+}
+ 
   /* Styles pour les liens */
   a {
     color: inherit;
@@ -118,10 +111,7 @@
     font-size: 16px;
   }
   
-  /* Style pour prix (euros) */
-  .euro {
-    font-weight: 700;
-  }
+ 
   
   /* Étoile neutre */
   .neutral-star {
@@ -159,7 +149,7 @@
   
   .label-location {
     display: flex;
-    padding: 10px;
+    padding: 2px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: var(--main-bg-color);
@@ -176,14 +166,12 @@
     color: black;
     font-weight: bold;
     text-align: center;
-    font-size: 15px;
   }
   
   .search-button {
     border: 2px solid var(--input-border-color);
     outline: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
     background-color: var(--main-color);
     cursor: pointer;
     font-size: 15px;
@@ -365,9 +353,7 @@
   }
   
   /* Titre des populaires */
-  .populaire-title {
-    margin-bottom: 10px;
-  }
+  
   
   /* Cartes des populaires */
   .populaires-cards {
@@ -448,7 +434,6 @@
   /* Image dans la carte des activités */
   .activities-card img {
     width: 100%;
-    height: 400px;
     object-fit: cover;
   }
   
@@ -466,9 +451,6 @@
 /* Footer */
 .footer-content {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 10px;
     margin-top: 60px;
     background-color: var(--main-bg-color);
     gap: 70px;
@@ -476,7 +458,7 @@
   
   .footer-nav {
     display: flex;
-    gap: 270px;
+    gap: 370px;
   }
   
   .footer-about,
@@ -506,6 +488,9 @@
   @media (max-width: 1024px) {
     
   
+    .main-container {
+        padding: 0 20px;
+    }
     /* Section des filtres */
     .filter-section {
       text-align: center;
@@ -589,19 +574,20 @@
 
 
   .activities-card img {
-    height: 160px;
+    height: 460px;
   }
   
+
+  .footer-nav {
+    display: flex;
+    gap: 60px;
+}
   /* Media queries pour les petits appareils (téléphones jusqu'à 768px) */
   @media (max-width: 767.98px) {
     /* Conteneur principal */
-    .main-container {
-      display: grid;
-      max-width: 1200px;
-      margin: 0;
-      padding: 0;
-      margin-right: 20px;
-      margin-left: 20px;
+   
+    .main-container{
+        padding: 0;
     }
   
     /* En-tête */
@@ -610,11 +596,14 @@
       flex-direction: column;
       align-items: center;
       padding: 20px;
+      align-content: center;
     }
   
     .logo {
-      width: 80px;
-      margin-bottom: 40px;
+        margin-bottom: 40px;
+        margin-left: 15px;
+        width: 62px;
+      
     }
   
     /* Menu de navigation */
@@ -622,17 +611,14 @@
       display: flex;
       justify-content: center;
       list-style: none;
-      padding: 0;
-      margin: 0;
+     
     }
   
     .main-nav li {
-      margin: 0px 50px;
+      margin: 0px 15px;
     }
   
-    .main-nav ul a {
-      font-size: 25px;
-    }
+
   
     .main-nav ul a:hover {
       border-bottom: 2px solid var(--main-color);
@@ -643,25 +629,19 @@
     }
   
     /* Texte d'introduction */
-    .search-accommodation {
-      margin-left: 20px;
-      margin-bottom: 0;
-    }
-  
+    
     .header-container {
       text-align: left;
       margin: 20px;
     }
   
     .header-title {
-      font-size: 34px;
-      margin-top: 50px;
-      font-weight: 700;
-      width: 500px;
+        font-size: 20px;
+        margin-top: 5px;
     }
   
     .subheader {
-      font-size: 25px;
+      font-size: 20px;
     }
   
     /* Formulaire de recherche */
@@ -673,15 +653,10 @@
   
     .input-location {
       padding: 10px;
-      flex: 1;
-      min-width: 200px;
-      max-width: 400px;
-      font-size: 16px;
-      font-size: 32px;
     }
   
     .input-location::placeholder {
-      font-size: 24px;
+      font-size: 18px;
     }
   
     .search-button {
@@ -706,7 +681,7 @@
   
     .label-location .fa-location-dot {
       padding-top: 8px;
-      font-size: 25px;
+      font-size: 15px;
       padding: 11px;
     }
   
@@ -726,32 +701,27 @@
     .filter-btn button {
       display: flex;
       align-items: center;
-      width: 43%;
-      font-size: 20px;
+      width: 45%;
     }
   
-    .filter-text {
-      font-size: 22px;
-    }
+    
   
     .filter-btn button i {
       margin-right: 6px;
     }
   
     .text-hebergement {
-      font-size: 22px;
       text-align: left;
     }
   
     .fa-circle-info {
-      font-size: 20px;
+        margin-left: 13px;
     }
   
     /* Information supplémentaire */
     .info-hebergement {
       text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
+      margin-bottom: 0;
     }
   
     .hebergements-and-populaires {
@@ -771,11 +741,10 @@
     .populaires-cards {
       display: flex;
       flex-direction: column;
-      margin-left: 50px;
     }
   
     .populaires-cards .card {
-      width: 400px;
+      width: 250px;
     }
   
     .populaires-cards .card .card-title {
@@ -785,8 +754,7 @@
     .hebergements-cards {
       display: flex;
       flex-direction: column;
-      width: 400px;
-      margin-left: 50px;
+      width: 250px;
     }
   
     .hebergements-and-populaires .hebergements {
@@ -800,8 +768,8 @@
     .activities-card {
       display: flex;
       flex-direction: column;
-      width: 400px;
-      margin-left: 80px;
+      width: 250px;
+      margin-left: 20px;
     }
   
     .activities-card img {
@@ -813,9 +781,9 @@
     }
   
     .title-activities {
-      margin-left: 90px;
-      font-size: 19px;
-      margin-bottom: 27px;
+        margin-left: 35px;
+        font-size: 12px;
+        margin-bottom: 20px;
     }
   
     /* Footer */
@@ -825,7 +793,6 @@
       margin-right: auto;
       gap: 30px;
       margin-left: 20px;
-      font-size: 22px;
       margin: 35px;
     }
   }
