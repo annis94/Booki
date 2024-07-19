@@ -870,11 +870,16 @@ a {
     padding-left: 15px;
   }
 
+  .activities-card a {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
   .activities-card {
     display: flex;
     flex-direction: column;
-    width: 280px;
-    margin-left: 20px;
+    width: 90%;
   }
 
   .activities-card img {
@@ -886,7 +891,7 @@ a {
   }
 
   .title-activities {
-    margin-left: 35px;
+    margin-left: 18px;
     font-size: 12px;
     margin-bottom: 20px;
   }
